@@ -5,3 +5,13 @@ markdown: kramdown
 
 title: Claire Ryan
 description: Blog
+
+defaults:
+  -
+    scope:
+      type: posts
+      path: _posts
+    values:
+      is_post: true
+      layout: post
+      permalink: /:title/
