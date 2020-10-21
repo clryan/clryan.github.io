@@ -41,9 +41,7 @@
       <section>
 
       {{ content }}
-
-      </section>
-      
+        
       <div id="all_posts">
       <h2> All Posts </h2>
       {% for post in site.posts %}
@@ -60,6 +58,8 @@
         <br />
       {% endfor %}
       </div>
+        
+      </section>
       
       <footer>
         {% if site.github.is_project_page %}
