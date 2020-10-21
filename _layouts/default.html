@@ -43,6 +43,24 @@
       {{ content }}
 
       </section>
+      
+      <div id="all_posts">
+      <h2> All Posts </h2>
+      {% for post in site.posts %}
+        <strong> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> </strong> <br />
+        <span><strong>{{ post.date | date_to_string }}</strong> - {{ post.language | concat: post.tags | array_to_sentence_string }}</span>
+        {% if post.description %} 
+          <p> {{ post.description }} </p>
+        {% endif %}
+        {% if post.img_url %} 
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <img src="{{ post.img_url }}" class="center_img">
+          </a>
+        {% endif %}
+        <br />
+      {% endfor %}
+      </div>
+      
       <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
