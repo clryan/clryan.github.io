@@ -42,21 +42,20 @@
 
       {{ content }}
         
-      <div id="all_posts">
-      <h2> All Posts </h2>
-      {% for post in site.posts %}
-        <strong> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> </strong> <br />
-        <span><strong>{{ post.date | date_to_string }}</strong> - {{ post.language | concat: post.tags | array_to_sentence_string }}</span>
-        {% if post.description %} 
-          <p> {{ post.description }} </p>
-        {% endif %}
-        {% if post.img_url %} 
-          <a href="{{ post.url }}" title="{{ post.title }}">
-            <img src="{{ post.img_url }}" class="center_img">
-          </a>
-        {% endif %}
-        <br />
-      {% endfor %}
+      <div id="recent_posts">
+      <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
+          {% for post in site.posts limit:5 %}    
+          <article>
+            {% if post.link %}
+              <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
+            {% else %}
+              <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+              <p class = "dateline">{{ post.date | date: "%B %d, %Y" }}</span>
+      </h2>
+              <p>{{ post.description | strip_html | truncate: 500 }}</p>
+            {% endif %}
+          </article>
+          {% endfor %}
       </div>
         
       </section>
