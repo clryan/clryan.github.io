@@ -43,15 +43,14 @@
       {{ content }}
         
       <div id="recent_posts">
-      <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
+      <h2><a href="{{ site.url}}/posts/">Recent Posts</a></h2><hr>
           {% for post in site.posts limit:5 %}    
           <article>
             {% if post.link %}
-              <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
+              <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h3>
             {% else %}
-              <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-              <p class = "dateline">{{ post.date | date: "%B %d, %Y" }}</span>
-      </h2>
+              <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+              <p class = "dateline">{{ post.date | date: "%B %d, %Y" }}</span></h3>
               <p>{{ post.description | strip_html | truncate: 500 }}</p>
             {% endif %}
           </article>
