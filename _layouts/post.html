@@ -22,7 +22,7 @@
         {{content}}
 
         {% if post.tags %}
-          <small>tags: <em>{{ post.tags | join: "</em> - <em>" }}</em></small>
+          <small>tags: <em>{{ post.tags | join: "</em> - <em>" }}</em></small><br>
         {% endif %}
       </section>
       
@@ -31,6 +31,5 @@
       </footer>
       
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
