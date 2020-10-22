@@ -1,7 +1,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="stylesheet" href="{{ "/assets/css/style.scss?v=" | append: site.github.build_revision | relative_url }}">
-<link rel="stylesheet" type="text/css" href="/assets/css/main.scss">
+<link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.scss?v=" | append: site.github.build_revision | relative_url }}">
 
 <script>
   function show_tag_section(tag) {
@@ -16,8 +15,6 @@
     document.getElementById(tag).style.display = 'block';
   }
 </script>
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-{% seo %}
 
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
