@@ -1,20 +1,5 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.scss?v=" | append: site.github.build_revision | relative_url }}">
-
-<script>
-  function show_tag_section(tag) {
-    // Hide all other tag divs
-    document.getElementById('all_posts').style.display = 'none';
-    var tag_divs = document.getElementsByClassName('by_tag');
-    var i; 
-    for (var i = 0; i < tag_divs.length; i++) {
-      tag_divs[i].style.display = 'none';
-    }
-    // Show the one we want
-    document.getElementById(tag).style.display = 'block';
-  }
-</script>
 
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
@@ -31,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.url }}/assets/css/style.scss">
+<link rel="stylesheet" href="/assets/css/style.scss">
 
 <!-- MathJax -->
 <script type="text/javascript"
