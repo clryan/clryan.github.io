@@ -2,9 +2,13 @@ theme: jekyll-theme-minimal
 highlighter: rouge
 markdown: kramdown
 
+# Personal attributes
 
+name: Claire Ryan
 title: Claire Ryan
 description: Blog
+
+# Defaults
 
 defaults:
   -
