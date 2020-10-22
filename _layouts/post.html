@@ -17,12 +17,12 @@
       </header>
       <section>
         <h1>{{ page.title }}</h1>
-        <small>{{ page.date | date: "%-d %B %Y" }}</small>
+        <small>{{ page.date | date: "%-d %B %Y" }}</small><br>
 
         {{content}}
 
         {% if post.tags %}
-          <small>tags: <em>{{ post.tags | join: "</em> - <em>" }}</em></small><br>
+          <small>tags: <em>{{ post.tags | join: "</em> - <em>" }}</em></small>
         {% endif %}
       </section>
       
