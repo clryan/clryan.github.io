@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Markdown Style Test
+description: Testing out styling
+is_post: true
 ---
 
 GitHub Flavored Markdown
