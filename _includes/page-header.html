@@ -4,55 +4,45 @@
 {% endif %}
 <h2><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h2>
 
-<div class="row">
-    <div class="col1"> 
+<div>
+    <div> 
       <p> {{ site.jobtitle }} at {{ site.company_name }}<br></p>
     </div>
 </div>
 
-<div class="row">
-  <div class="col1"> 
+<div class="social">
     <img src="/assets/img/place_icon.png" height="16" width="16" style="vertical-align: middle;">  
     <span style="vertical-align: middle;"> {{ site.location }} </span>
-  </div>
 </div>
 
 <!-- Twitter -->
-<div class="row">
+<div class="social">
   <a href="https://twitter.com/{{ site.twitter }}">
-    <div class="col1"> 
       <img src="https://abs.twimg.com/favicons/twitter.ico" height="16" width="16" style="vertical-align: middle;">  
       <span style="vertical-align: middle;"> Twitter </span>
-    </div>
   </a>
 </div>
 
 <!-- LinkedIn -->
-<div class="row">
+<div class="social">
   <a href="https://www.linkedin.com/in/{{ site.linkedin }}">
-    <div class="col1"> 
       <img src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" height="16" width="16" style="vertical-align: middle;">  
       <span style="vertical-align: middle;"> LinkedIn </span>
-    </div>
   </a>
 </div>
 
 <!-- GitHub -->
-<div class="row">
+<div class="social">
   <a href="https://github.com/{{ site.github }}">
-    <div class="col1"> 
       <img src="https://github.githubassets.com/favicons/favicon.png" height="16" width="16" style="vertical-align: middle;">  
       <span style="vertical-align: middle;"> GitHub </span>
-    </div>
   </a>
 </div>
 
 <!-- Email -->
-<div class="row">
+<div class="social">
   <a href="mailto:{{ site.email }}">
-    <div class="col1"> 
       <img src="/assets/img/email_icon.png" height="16" width="16" style="vertical-align: middle;">  
       <span style="vertical-align: middle;"> Email </span>
-    </div>
   </a>
 </div>
