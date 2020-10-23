@@ -8,6 +8,8 @@
     <header>
       {% include page-header.html %}
     </header>
+    
+    <section>
 
    {% if page.image.feature %}
      <div class="image-wrap">
@@ -47,14 +49,15 @@
             </article>
       {% endfor %}
     </div><!-- /#index -->
-
+    </section>
+      
   <footer>
 
     {% include footer.html %}
 
   </footer>
       
-  </div>
+  </div><!-- /.wrapper -->
   <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   {% if site.google_analytics %}
     <script>
