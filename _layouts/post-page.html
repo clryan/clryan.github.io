@@ -27,7 +27,7 @@
    {% endif %}
 
     <div id="index">
-      <h2>{{ page.title }}</h2>
+      <h2 id="page-title">{{ page.title }}</h2>
       {% for post in site.posts %}  
       {% unless post.next %}
         <h3>{{ post.date | date: '%Y' }}</h3>
@@ -47,6 +47,9 @@
                 <p>{{ post.description | strip_html | truncate: 500 }}</p>
               {% endif %}
             </article>
+              
+          <a href="#page-title" class="back-to-top">Back to Top ↑</a>
+              
       {% endfor %}
     </div><!-- /#index -->
     </section>
