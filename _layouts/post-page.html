@@ -3,7 +3,11 @@
 {% include head.html %}
 </head>
 
-<body class="post-index">
+ <body>
+    <div class="wrapper">
+      <header>
+        {% include page-header.html %}
+      </header>
 
 {% if page.image.feature %}
   <div class="image-wrap">
@@ -20,12 +24,8 @@
   </div><!-- /.image-wrap -->
 {% endif %}
 
-<div id="main" role="main">
-  <div class="article-author-side">
-    {% include header-page.html %}
-  </div>
   <div id="index">
-    <h1>{{ page.title }}</h1>
+    <h2>{{ page.title }}</h2>
     {% for post in site.posts %}  
     {% unless post.next %}
       <h3>{{ post.date | date: '%Y' }}</h3>
@@ -36,25 +36,37 @@
           <h3>{{ post.date | date: '%Y' }}</h3>
         {% endif %}
       {% endunless %}
-    <article>
-      {% if post.link %}
-        <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
-      {% else %}
-        <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        <p class = "dateline">{{ post.date | date: "%B %d, %Y" }}</span>
-</h2>
-        <p>{{ post.description | strip_html | truncate: 500 }}</p>
-      {% endif %}
-    </article>
+          <article>
+            {% if post.link %}
+              <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h3>
+            {% else %}
+              <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+              <p class = "dateline">{{ post.date | date: "%B %d, %Y" }}</p>
+              <p>{{ post.description | strip_html | truncate: 500 }}</p>
+            {% endif %}
+          </article>
     {% endfor %}
   </div><!-- /#index -->
 </div><!-- /#main -->
 
-<div class="footer-wrap">
-  <footer>
-    {% include footer.html %}
-  </footer>
-</div><!-- /.footer-wrap -->
-  
-</body>
+      <footer>
+        
+        {% include footer.html %}
+        
+      </footer>
+      
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    {% if site.google_analytics %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+  </body>
 </html>
+
