@@ -37,6 +37,9 @@
           {% if year != nyear %}
             <h3>{{ post.date | date: '%Y' }}</h3>
           {% endif %}
+      
+          <a href="#page-title" class="back-to-top">Back to Top ↑</a>
+      
         {% endunless %}
             <article>
               {% if post.link %}
@@ -47,8 +50,6 @@
                 <p>{{ post.description | strip_html | truncate: 500 }}</p>
               {% endif %}
             </article>
-              
-          <a href="#page-title" class="back-to-top">Back to Top ↑</a>
               
       {% endfor %}
     </div><!-- /#index -->
