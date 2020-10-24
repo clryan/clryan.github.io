@@ -2,9 +2,6 @@
 .social {
   display: block;
   margin-bottom: 10px;
-  &:hover {
-    color:#2b2b2b;
-    font-weight: bold;
   }
 }
 
@@ -35,9 +32,11 @@ nav {
 }
 
 .link-post {
-  
+  line-height: 2;
 }
 
 .dateline {
-  
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font: 11px;
 }
