@@ -1,0 +1,23 @@
+---
+layout: post
+title: Testing year separator with a 2019 post
+description: This is a longer description, so I can see word wrapping and style the description text. I'd like to see how much text can fit on one line.
+is_post: true
+---
+
+GitHub Flavored Markdown
+================================
+
+*View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
+
+Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:
+
+Roses are red
+Violets are blue
+
+The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:
+
+Roses are red  
+Violets are blue
+
+Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.
