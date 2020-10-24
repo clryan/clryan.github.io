@@ -1,12 +1,19 @@
 
 .social {
   display: block;
-  margin-bottom: 5px;
-  color: #727272;
+  margin-bottom: 10px;
   &:hover {
     color:#2b2b2b;
     font-weight: bold;
   }
+}
+
+a.social {
+  color: #7b7b7b
+}
+
+a.social:hover {
+  color:#2b2b2b;
 }
 
 body {
