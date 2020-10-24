@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi there! I'm a senior data analyst at DaVita, and I just finished a Master's in Business Analytics at the Carlson School of Management (University of Minnesota). My interests include predictive modeling, data visualization, statistics, and causal inference.
+Hi there! I'm a senior data analyst at DaVita, and I just finished a Master's in Business Analytics at the Carlson School of Management (University of Minnesota). My interests include predictive modeling, data visualization, statistics, and causal inference.  
 I'm proficient in Python, R, and SQL, and I know a bit about CSS from building this site.
 
 ### Random Facts About Me
@@ -21,7 +21,7 @@ I'm proficient in Python, R, and SQL, and I know a bit about CSS from building t
 
 ### About This Site
 
-This site is powered by [Jekyll](http://jekyllrb.com/) using the [Minimal](https://github.com/pages-themes/minimal) theme. All blog posts are released under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+This site is powered by [Jekyll](http://jekyllrb.com/) using the [Minimal](https://github.com/pages-themes/minimal) theme. All blog posts are released under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).  
 All opinions and views are my own and do not represent my employer.
 
 
