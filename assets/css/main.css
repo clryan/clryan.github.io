@@ -54,7 +54,7 @@ small {
   display: block;
   clear: both;
   font-size: 0.8em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   text-align: right;
   text-decoration: none;
 }
