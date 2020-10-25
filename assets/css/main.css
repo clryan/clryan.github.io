@@ -3,7 +3,7 @@ body {
   font-size: 18px;
 }
 
-p {
+p, li {
   font-family: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
   font-size: 18px;
   line-height: 1.4;
