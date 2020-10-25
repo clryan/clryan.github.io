@@ -49,7 +49,7 @@
               {% if post.link %}
                 <p><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></p>
               {% else %}
-                <p style="margin-bottom:0px;margin-top:1.5em;"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post" style="font-weight:500;">{{ post.title }}</a></p>
+                <p style="margin-bottom:0px;margin-top:1.5em;"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post" style="font-weight:500;font-size:24px;">{{ post.title }}</a></p>
                 <p style="margin-top:2px;margin-bottom:1.5em;" class = "dateline" style="font-size:13px;">{{ post.date | date: "%B %d, %Y" }}</p>
                 <p>{{ post.description | strip_html | truncate: 500 }}</p>
               {% endif %}
