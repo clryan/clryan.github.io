@@ -83,6 +83,10 @@ p.dateline {
 
 @media print, screen and (max-width: 1160px) {
 
+  p, li {
+  font-size: 16px;
+  }
+  
   div.wrapper {
     width:auto;
     margin:0;
