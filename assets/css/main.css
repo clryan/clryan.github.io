@@ -25,11 +25,11 @@ small {
   }
 }
 
-a.social {
+.social a {
   color: #7b7b7b
 }
 
-a.social:hover {
+.social a:hover {
   color:#2b2b2b;
 }
 
