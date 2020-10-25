@@ -98,7 +98,7 @@ p.dateline {
     display:flex;
   }
   
-  .webpage-header {
+  .webpage-header, .webpage-nav {
     display:none;
   }
     
