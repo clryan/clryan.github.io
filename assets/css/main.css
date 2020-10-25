@@ -71,3 +71,39 @@ p.dateline {
   margin-bottom: 10px;
   font-size: 13px;
 }
+
+@media print, screen and (min-width: 1160px) {
+  header {
+    display:block;
+  }
+
+  div.small_header {
+    display:none;
+  }
+}
+
+@media print, screen and (max-width: 1160px) {
+
+  div.wrapper {
+    width:auto;
+    margin:0;
+  }
+    
+  section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  div.small_header {
+    display:flex;
+  }
+    
+  section {
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding:20px 0;
+    margin:0 0 20px;
+  }
+    
+}
