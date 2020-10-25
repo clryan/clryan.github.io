@@ -47,7 +47,7 @@
         {% endunless %}
             <article>
               {% if post.link %}
-                <p><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} class="link-post"</a></p>
+                <p><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></p>
               {% else %}
                 <p><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
                 <p class = "dateline">{{ post.date | date: "%B %d, %Y" }}</p>
