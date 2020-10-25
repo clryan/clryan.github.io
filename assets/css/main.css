@@ -4,6 +4,11 @@ body {
   font-size: 18px;
 }
 
+h1, h2, h3 {
+  font-family: "Fira Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 0.5em;
+}
+
 p, li {
   font-family: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
   font-size: 18px;
