@@ -37,12 +37,12 @@
       <h2 id="page-title" style="font-weight:600;font-size:25px;">{{ page.title }}</h2>
       {% for post in site.posts %}  
       {% unless post.next %}
-        <h3 style="font-weight:600;font-size:22px;">{{ post.date | date: '%Y' }}</h3>
+        <h3 style="font-weight:600;font-size:22px;">{{ post.date | date: '%Y' }}</h3><hr>
         {% else %}
           {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
           {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
           {% if year != nyear %}
-            <h3>{{ post.date | date: '%Y' }}</h3>
+            <h3 style="font-weight:600;font-size:22px;">{{ post.date | date: '%Y' }}</h3><hr>
           {% endif %}
         {% endunless %}
             <article>
