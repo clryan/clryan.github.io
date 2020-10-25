@@ -1,7 +1,6 @@
 body {
   font-family: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
   line-height: 1.4;
-  font-size: 18px;
 }
 
 h1, h2, h3 {
@@ -11,8 +10,8 @@ h1, h2, h3 {
 
 p, li {
   font-family: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 17px;
+  line-height: 1.45;
 }
 
 nav {
