@@ -48,7 +48,7 @@ small {
   text-decoration: none;
 }
 
-p.link-post {
+a.link-post {
   margin-top: 15px;
   margin-bottom: 5px;
   font-weight: bold;
