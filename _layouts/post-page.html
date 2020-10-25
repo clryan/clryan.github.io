@@ -34,10 +34,10 @@
    {% endif %}
 
     <div id="index">
-      <h2 id="page-title">{{ page.title }}</h2>
+      <h2 id="page-title" style="font-weight:600;font-size:25px;">{{ page.title }}</h2>
       {% for post in site.posts %}  
       {% unless post.next %}
-        <h3>{{ post.date | date: '%Y' }}</h3>
+        <h3 style="font-weight:600;font-size:22px;">{{ post.date | date: '%Y' }}</h3>
         {% else %}
           {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
           {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
@@ -49,8 +49,8 @@
               {% if post.link %}
                 <p><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></p>
               {% else %}
-                <p style="margin-bottom:0px;margin-top:1.5em;"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post" style="font-weight:500;font-size:24px;">{{ post.title }}</a></p>
-                <p style="margin-top:2px;margin-bottom:1.5em;text-transform:uppercase;font-size:14px;" class = "dateline">{{ post.date | date: "%B %d, %Y" }}</p>
+                <p style="margin-bottom:0px;margin-top:0.5em;"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post" style="font-weight:500;font-size:21px;">{{ post.title }}</a></p>
+                <p style="margin-top:2px;margin-bottom:0.5em;text-transform:uppercase;font-size:14px;" class = "dateline">{{ post.date | date: "%B %d, %Y" }}</p>
                 <p>{{ post.description | strip_html | truncate: 500 }}</p>
               {% endif %}
             </article>
