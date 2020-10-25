@@ -98,6 +98,10 @@ p.dateline {
   div.small_header {
     display:flex;
   }
+  
+  .webpage-header {
+    display:none;
+  }
     
   section {
     border:1px solid #e5e5e5;
