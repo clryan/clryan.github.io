@@ -16,8 +16,6 @@ p, li {
 }
 
 nav {
-  margin-top: -30px;
-  margin-bottom: 50px;
   text-transform: lowercase;
 }
 
@@ -72,6 +70,12 @@ p.dateline {
 }
 
 @media print, screen and (min-width: 1160px) {
+  
+  nav {
+    margin-top: -30px;
+    margin-bottom: 50px;
+  }
+  
   header {
     display:block;
   }
