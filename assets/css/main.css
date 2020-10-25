@@ -19,7 +19,7 @@ p, li {
 nav {
   margin-top: -30px;
   margin-bottom: 50px;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 nav a {
