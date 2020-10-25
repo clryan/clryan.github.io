@@ -104,6 +104,7 @@ p.dateline {
 
   div.small_header {
     display:flex;
+    margin-bottom: 0.8em;
   }
   
   .webpage-header, .webpage-nav {
