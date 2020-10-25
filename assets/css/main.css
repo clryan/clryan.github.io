@@ -7,6 +7,7 @@ h1, h2, h3 {
   font-family: "Fira Sans", "Helvetica Neue", sans-serif;
   margin-bottom: 0.5em;
   font-variant-numeric: tabular-nums;
+  font-weight: 400;
 }
 
 p, li {
@@ -19,6 +20,9 @@ nav {
   margin-top: -30px;
   margin-bottom: 50px;
   text-transform: uppercase;
+}
+
+nav a {
   font-size: 18px;
   font-weight: 700;
 }
