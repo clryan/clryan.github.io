@@ -1,16 +1,16 @@
 body {
-  font-family: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
+  font-family: "Source Serif Pro", "Segoe UI", "Helvetica Neue", sans-serif;
   line-height: 1.4;
 }
 
 h1, h2, h3 {
-  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
   margin-bottom: 0.5em;
   font-weight: 400;
 }
 
 p, li {
-  font-family: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
+  font-family: "Source Serif Pro", "Segoe UI", "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.45;
 }
