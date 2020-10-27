@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerifVariable-Roman.otf") format('otf-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 body {
   font-family: "Source Serif Pro", "Segoe UI", "Helvetica Neue", sans-serif;
   line-height: 1.4;
