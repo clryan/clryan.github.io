@@ -82,7 +82,7 @@ nav a {
 
 p a {
   text-decoration: underline;
-  text-decoration-offset: .008em;
+  text-decoration-offset: .1em;
   text-decoration-thickness: .1em;
 }
 
