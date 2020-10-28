@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: "Source Serif";
+  src: url("../fonts/SourceSerifVariable-Italic.otf") format('otf-variations');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@font-face {
   font-family: "Source Sans Pro";
   src: url("../fonts/SourceSans3VF-Roman.otf") format('otf-variations');
   font-weight: 100 900;
@@ -28,7 +35,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Source Serif Pro", "Helvetica Neue", sans-serif;
+  font-family: "Source Serif", "Helvetica Neue", sans-serif;
   margin-bottom: 0.5em;
 }
 
