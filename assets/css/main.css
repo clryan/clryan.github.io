@@ -65,6 +65,13 @@ a {
   color: #2455c3;
 }
 
+a:hover {
+  text-decoration: underline;
+  text-decoration-offset: .1em;
+  text-decoration-thickness: .1em;
+  color: #2b2b2b;
+}
+
 section {
   width:550px;
 }
@@ -81,9 +88,7 @@ nav a {
 }
 
 p a {
-  text-decoration: underline;
-  text-decoration-offset: .1em;
-  text-decoration-thickness: .1em;
+  font-weight: bold;
 }
 
 small {
