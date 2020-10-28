@@ -35,7 +35,7 @@ body {
   border-top-width: 5px;
   border-top-color: #2455c3;
   border-top-style: solid;
-  padding: 0px 50px 50px 50px;
+  margin: 0px 8px 8px 8px;
   
 }
 
@@ -63,9 +63,6 @@ p, li {
 
 a {
   color: #2455c3;
-  text-decoration: underline;
-  text-decoration-offset: .008em;
-  text-decoration-thickness: .1em;
 }
 
 section {
@@ -81,6 +78,12 @@ nav a {
   font-size: 20px;
   font-weight: 400;
   vertical-align: middle;
+}
+
+p a {
+  text-decoration: underline;
+  text-decoration-offset: .008em;
+  text-decoration-thickness: .1em;
 }
 
 small {
