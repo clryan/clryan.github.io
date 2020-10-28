@@ -22,7 +22,8 @@
       {{ content }}
         
       <div id="recent_posts">
-      <h1><a href="{{ site.url}}/posts/">Recent Posts</a></h1><hr>
+      <h1>Recent Posts</h1>
+        <p>See <a href="{{ site.url}}/posts/">all posts</a> here.</p><hr>
           {% for post in site.posts limit:5 %}    
           <article>
             {% if post.link %}
