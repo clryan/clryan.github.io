@@ -35,11 +35,11 @@ body {
   border-top-width: 5px;
   border-top-color: #2455c3;
   border-top-style: solid;
+  padding: 0px 50px 50px 50px;
   
 }
 
 h1, h2, h3 {
-  font-family: "Source Serif Pro", "Helvetica Neue", sans-serif;
   margin-bottom: 0.5em;
 }
 
@@ -47,6 +47,7 @@ h1 {
   font-weight: 900;
   font-size: 36px;
   font-style: italic;
+  font-family: "Source Serif Pro"
 }
 
 h3 {
@@ -62,6 +63,9 @@ p, li {
 
 a {
   color: #2455c3;
+  text-decoration: underline;
+  text-decoration-offset: .008em;
+  text-decoration-thickness: .1em;
 }
 
 section {
