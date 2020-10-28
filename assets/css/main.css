@@ -23,6 +23,8 @@ body {
   font-family: "Source Sans Pro", "Segoe UI", "Helvetica Neue", sans-serif;
   line-height: 1.5;
   color:#2b2b2b;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga' on, 'clig' on, 'dlig' off;
 }
 
 h1, h2, h3 {
