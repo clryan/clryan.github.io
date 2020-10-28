@@ -22,13 +22,13 @@
       {{ content }}
         
       <div id="recent_posts">
-      <h2><a href="{{ site.url}}/posts/">Recent Posts</a></h2><hr>
+      <h1><a href="{{ site.url}}/posts/">Recent Posts</a></h1><hr>
           {% for post in site.posts limit:5 %}    
           <article>
             {% if post.link %}
-              <p class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></p>
+              <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></h3>
             {% else %}
-              <p class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></p>
+              <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></h3>
               <p class = "dateline">{{ post.date | date: "%B %d, %Y" }}</p>
               <p>{{ post.description | strip_html | truncate: 500 }}</p>
             {% endif %}
