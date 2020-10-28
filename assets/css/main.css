@@ -5,6 +5,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSans3VF-Roman.otf") format('otf-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSans3VF-Italic.otf") format('otf-variations');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
 body {
   font-family: "Source Sans Pro", "Segoe UI", "Helvetica Neue", sans-serif;
   line-height: 1.5;
@@ -24,7 +38,7 @@ p, li {
 }
 
 a {
-  color: #e85a4f;
+  color: #31708e;
 }
 
 section {
