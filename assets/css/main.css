@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Source Serif";
+  font-family: "Source Serif Pro";
   src: url("../fonts/SourceSerifVariable-Roman.otf") format('otf-variations');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Source Serif";
+  font-family: "Source Serif Pro";
   src: url("../fonts/SourceSerifVariable-Italic.otf") format('otf-variations');
   font-weight: 100 900;
   font-style: italic;
@@ -35,7 +35,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Source Serif", "Helvetica Neue", sans-serif;
+  font-family: "Source Serif Pro", "Helvetica Neue", sans-serif;
   margin-bottom: 0.5em;
 }
 
@@ -66,12 +66,12 @@ section {
 
 nav {
   font-weight: 600;
-  font-variant: small-caps;
+  text-transform: lowercase;
 }
 
 nav a {
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
   vertical-align: middle;
 }
 
