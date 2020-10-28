@@ -62,14 +62,11 @@ p, li {
 }
 
 a {
-  color: #2455c3;
+  color: #444444;
 }
 
 a:hover {
-  text-decoration: underline;
-  text-decoration-offset: .1em;
-  text-decoration-thickness: .1em;
-  color: #2b2b2b;
+  color: #2455c3;
 }
 
 section {
@@ -118,6 +115,7 @@ small {
   text-transform: lowercase;
   text-align: right;
   text-decoration: none;
+  color: #2455c3;
 }
 
 .link-post {
