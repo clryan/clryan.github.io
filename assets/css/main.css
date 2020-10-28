@@ -63,9 +63,8 @@ nav {
 }
 
 nav a {
-  font-size: 18px;
-  font-weight: 500;
-  font-feature-settings: smcp;
+  font-size: 16px;
+  font-weight: 300;
   vertical-align: middle;
 }
 
