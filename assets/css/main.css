@@ -32,6 +32,10 @@ body {
   color:#444444;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga' on, 'clig' on, 'dlig' off;
+  border-top-width: 5px;
+  border-top-color: #2455c3;
+  border-top-style: solid;
+  
 }
 
 h1, h2, h3 {
@@ -114,6 +118,7 @@ p.dateline {
   margin-top: 0px;
   margin-bottom: 10px;
   font-size: 13px;
+  color: #818181;
 }
 
 @media print, screen and (min-width: 1060px) {
