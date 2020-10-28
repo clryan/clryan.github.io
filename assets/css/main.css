@@ -59,13 +59,14 @@ section {
 
 nav {
   font-weight: 600;
-  vertical-align: center;
+  font-variant: small-caps;
 }
 
 nav a {
   font-size: 18px;
   font-weight: 500;
   font-feature-settings: smcp;
+  vertical-align: center;
 }
 
 small {
