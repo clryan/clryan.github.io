@@ -3,10 +3,10 @@ layout: post
 title: Markdown Style Test
 description: Testing out styling
 is_post: true
+tags: [r, machine learning]
 ---
 
-GitHub Flavored Markdown
-================================
+### GitHub Flavored Markdown
 
 *View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
 
@@ -22,8 +22,7 @@ Violets are blue
 
 Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.
 
-A bit of the GitHub spice
--------------------------
+### A bit of the GitHub spice
 
 In addition to the changes in the previous section, certain references are auto-linked:
 
@@ -38,15 +37,13 @@ These are dangerous goodies though, and we need to make sure email addresses don
 
 My email addy is tom@github.com.
 
-Math is hard, let's go shopping
--------------------------------
+### Math is hard, let's go shopping
 
 In first grade I learned that 5 > 3 and 2 < 7. Maybe some arrows. 1 -> 2 -> 3. 9 <- 8 <- 7.
 
 Triangles man! a^2 + b^2 = c^2
 
-We all like making lists
-------------------------
+### We all like making lists
 
 The above header should be an H2 tag. Now, for a list of fruits:
 
@@ -85,8 +82,7 @@ Some people seem to like definition lists
   <dd>We've changed the product so that it's much easier to use!</dd>
 </dl>
 
-I am a robot
-------------
+### I am a robot
 
 Maybe you want to print `robot` to the console 1000 times. Why not?
 
@@ -102,8 +98,7 @@ How about we throw some angle braces and ampersands in there?
         &copy; 2004 Foo Corporation
     </div>
 
-Set in stone
-------------
+### Set in stone
 
 Preformatted blocks are useful for ASCII art:
 
@@ -121,8 +116,7 @@ Preformatted blocks are useful for ASCII art:
   ___|_____________ 
 </pre>
 
-Playing the blame game
-----------------------
+### Playing the blame game
 
 If you need to blame someone, the best way to do so is by quoting them:
 
@@ -140,8 +134,7 @@ Or perhaps someone a little less eloquent:
 > just put me under the spot here, and maybe I'm not as quick on my feet
 > as I should be in coming up with one.
 
-Table for two
--------------
+### Table for two
 
 <table>
   <tr>
@@ -155,8 +148,7 @@ Table for two
   </tr>
 </table>
 
-Crazy linking action
---------------------
+### Crazy linking action
 
 I get 10 times more traffic from [Google] [1] than from
 [Yahoo] [2] or [MSN] [3].
