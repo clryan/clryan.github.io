@@ -41,7 +41,7 @@ body {
 }
 
 h1, h2, h3 {
-  margin-bottom: 0.5em;
+  line-height: 1.1;
 }
 
 h1 {
@@ -124,14 +124,10 @@ small {
 }
 
 .link-post {
-  margin-top:  30px;
-  margin-bottom: 15px;
-  font-variant: small-caps;
+
 }
 
 p.dateline {
-  margin-top: 10px;
-  margin-bottom: 15px;
   font-size: 13px;
   color: #818181;
 }
