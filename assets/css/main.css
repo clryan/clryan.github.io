@@ -52,13 +52,8 @@ h1 {
 }
 
 h3 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
-}
-
-h3 a {
-  color: #2455c3;
-  
 }
 
 p, li {
@@ -73,6 +68,8 @@ a {
 
 a:hover {
   color: #2455c3;
+  text-decoration: underline;
+  font-weight: inherit;
 }
 
 section {
@@ -92,7 +89,7 @@ nav a {
 }
 
 p a {
-  font-weight: bold;
+  font-weight: 500;
   color: #2455c3;
 }
 
@@ -128,7 +125,8 @@ small {
 
 .link-post {
   margin-top:  30px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-variant: small-caps;
 }
 
 p.dateline {
