@@ -81,7 +81,8 @@ section {
 }
 
 article {
-  margin: 20px 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 nav {
@@ -148,6 +149,7 @@ p.dateline {
   font-variant-numeric: oldstyle-nums;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-weight: 900;
 }
 
 @media print, screen and (min-width: 1060px) {
