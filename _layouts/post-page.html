@@ -36,7 +36,7 @@
     <div id="index">
       <h1 id="page-title">{{ page.title }}</h1>
     
-      
+    <a onclick="show_tag_section('all_posts')" style="cursor: pointer;" class="post_lang"> all posts </a> 
     {% for tag in site.tags %}
     <a onclick="show_tag_section('{{ tag[0] | slugify }}')" style="cursor: pointer;" class="post-tag"> {{ tag[0] }} </a>
     {% endfor %}
@@ -63,6 +63,27 @@
             </article>
               
       {% endfor %}
+      
+      {% for tag in tags %}
+        <div id="{{ tag | slugify }}" class="by_tag">
+        <h2 id="{{ tag | slugify }}">Posts tagged "{{ tag }}"</h2>
+       {% for post in site.posts %}
+         {% if post.tags contains tag %}
+           <strong> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> </strong> <br />
+           <span><strong>{{ post.date | date_to_string }}</strong> - {{ post.language | concat: post.tags | array_to_sentence_string }}</span>
+           {% if post.description %} 
+             <p> {{ post.description }} </p>
+           {% endif %}
+           {% if post.img_url %} 
+             <a href="{{ post.url }}" title="{{ post.title }}">
+               <img src="{{ post.img_url }}" class="center_img">
+             </a>
+           {% endif %}
+           <br />
+         {% endif %}
+       {% endfor %}
+      </div>
+    {% endfor %}
                                   
       <a href="#page-top" class="back-to-top">Back to Top ↑</a>
       
