@@ -38,7 +38,7 @@
     
       
     {% for tag in site.tags %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    <a onclick="show_tag_section('{{ tag[0] | slugify }}')" style="cursor: pointer;" class="post-tag"> {{ tag[0] }} </a>
     {% endfor %}
       
       
