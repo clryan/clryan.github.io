@@ -62,8 +62,8 @@
     {% endfor %}
       
     <a onclick="show_tag_section('all_posts')" style="cursor: pointer;" class="post_lang"> all posts </a> 
-    {% for tag in site.tags %}
-    <a onclick="show_tag_section('{{ tag | slugify }}')" style="cursor: pointer;" class="post-tag"> {{ tag }} </a>
+    {% for tag in tags %}
+      <a onclick="show_tag_section('{{ tag | slugify }}')" style="cursor: pointer;" class="post_tag"> {{ tag }} </a>
     {% endfor %}
       
       
