@@ -93,6 +93,9 @@
         <div id="{{ tag | slugify }}" class="by_tag">
         <h3 id="{{ tag | slugify }}">Posts tagged "{{ tag }}"</h3>
       {% for post in site.posts %}  
+          
+      {% if post.tags contains tag %}
+          
       {% unless post.next %}
         <h3 class="year-section">{{ post.date | date: '%Y' }}</h3>
         {% else %}
@@ -111,7 +114,7 @@
               <p>{{ post.description | strip_html | truncate: 500 }}</p>
               {% endif %}
             </article>
-              
+      {% endif %}        
       {% endfor %}
           
       </div>
