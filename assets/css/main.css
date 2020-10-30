@@ -33,7 +33,7 @@ body {
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga' on, 'clig' on, 'dlig' off;
   border-top-width: 5px;
-  border-top-color: #2455c3;
+  border-top-color: #883364;
   border-top-style: solid;
   margin: 0px 0px 0px 0px;
   padding: 50px 58px 58px 58px;
@@ -75,7 +75,7 @@ a {
 }
 
 a:hover, a:active, a:focus {
-  color: #2455c3;
+  color: #883364;
   text-decoration: underline;
   font-weight: inherit;
 }
@@ -131,7 +131,7 @@ small {
   text-transform: lowercase;
   text-align: right;
   text-decoration: none;
-  color: #2455c3;
+  color: #883364;
 }
 
 .link-post {
@@ -144,9 +144,9 @@ p.dateline {
 }
 
 .year-section {
-  color: #2455c3;
+  color: #883364;
   border-top-width: 2px;
-  border-top-color: #2455c3;
+  border-top-color: #883364;
   border-top-style: solid;
   margin-top: 30px;
   margin-bottom: 30px;
