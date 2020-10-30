@@ -146,12 +146,12 @@ p.dateline {
 .year-section {
   color: #2455c3;
   border-top-width: 2px;
-  border-top-color: #444444;
+  border-top-color: #2455c3;
   border-top-style: solid;
   margin-top: 30px;
   margin-bottom: 30px;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 @media print, screen and (min-width: 1060px) {
