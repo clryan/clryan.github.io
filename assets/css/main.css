@@ -170,10 +170,6 @@ p.dateline {
 }
 
 @media print, screen and (max-width: 1060px) {
-
-  body {
-    padding: 15px;
-  }
   
   p, li {
   font-size: 17px;
@@ -207,3 +203,9 @@ p.dateline {
   }
     
 }
+
+@media print, screen and (max-width: 480px) {
+
+  body {
+    padding: 15px;
+  }
