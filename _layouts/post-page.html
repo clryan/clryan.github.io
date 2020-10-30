@@ -35,6 +35,13 @@
 
     <div id="index">
       <h1 id="page-title">{{ page.title }}</h1>
+    
+      
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    {% endfor %}
+      
+      
       {% for post in site.posts %}  
       {% unless post.next %}
         <h3 class="year-section">{{ post.date | date: '%Y' }}</h3>
