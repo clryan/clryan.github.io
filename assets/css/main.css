@@ -27,7 +27,7 @@
 }
 
 body {
-  font-family: "Source Sans Pro", "Segoe UI", "Helvetica Neue", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5;
   color:#444444;
   text-rendering: optimizeLegibility;
@@ -48,7 +48,7 @@ h1 {
   font-weight: 900;
   font-size: 36px;
   font-style: italic;
-  font-family: "Source Serif Pro"
+  font-family: "Source Serif Pro", serif;
 }
 
 h3 {
@@ -143,13 +143,14 @@ p.dateline {
 
 .year-section {
   color: #2455c3;
-  border-top-width: 3px;
+  border-top-width: 2px;
   border-top-color: #2455c3;
   border-top-style: solid;
   font-variant-numeric: oldstyle-nums;
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 900;
+  font-size: 16px
 }
 
 @media print, screen and (min-width: 1060px) {
