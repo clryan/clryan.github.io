@@ -169,6 +169,10 @@ p.dateline {
   div.small_header {
     display:none;
   }
+  
+  div.small-footer {
+    display:none;
+  }
 }
 
 @media print, screen and (max-width: 1060px) {
@@ -194,6 +198,10 @@ p.dateline {
   }
   
   .webpage-header, .webpage-nav {
+    display:none;
+  }
+  
+  .webpage-footer {
     display:none;
   }
     
