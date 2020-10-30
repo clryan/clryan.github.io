@@ -81,7 +81,7 @@ section {
 }
 
 article {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 50px;
 }
 
@@ -142,15 +142,15 @@ p.dateline {
 }
 
 .year-section {
-  color: #2455c3;
   border-top-width: 2px;
   border-top-color: #2455c3;
   border-top-style: solid;
   font-variant-numeric: oldstyle-nums;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   font-weight: 900;
-  font-size: 16px
+  font-size: 16px;
+  font-face: "Source Serif Pro";
 }
 
 @media print, screen and (min-width: 1060px) {
@@ -171,6 +171,10 @@ p.dateline {
 
 @media print, screen and (max-width: 1060px) {
 
+  body {
+    padding: 15px;
+  }
+  
   p, li {
   font-size: 17px;
   }
