@@ -61,7 +61,7 @@
       {% endif %}
     {% endfor %}
       
-    <a onclick="show_tag_section('all_posts')" style="cursor: pointer;" class="post_lang"> all posts </a> 
+    <a onclick="show_tag_section('all_posts')" style="cursor: pointer;" class="post_tag"> all posts </a> 
     {% for tag in tags %}
       <a onclick="show_tag_section('{{ tag | slugify }}')" style="cursor: pointer;" class="post_tag"> {{ tag }} </a>
     {% endfor %}
@@ -91,22 +91,28 @@
       
       {% for tag in tags %}
         <div id="{{ tag | slugify }}" class="by_tag">
-        <h2 id="{{ tag | slugify }}">Posts tagged "{{ tag }}"</h2>
-       {% for post in site.posts %}
-         {% if post.tags contains tag %}
-           <strong> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> </strong> <br />
-           <span><strong>{{ post.date | date_to_string }}</strong> - {{ post.language | concat: post.tags | array_to_sentence_string }}</span>
-           {% if post.description %} 
-             <p> {{ post.description }} </p>
-           {% endif %}
-           {% if post.img_url %} 
-             <a href="{{ post.url }}" title="{{ post.title }}">
-               <img src="{{ post.img_url }}" class="center_img">
-             </a>
-           {% endif %}
-           <br />
-         {% endif %}
-       {% endfor %}
+      {% for post in site.posts %}  
+      {% unless post.next %}
+        <h3 class="year-section">{{ post.date | date: '%Y' }}</h3>
+        {% else %}
+          {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+          {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+          {% if year != nyear %}
+            <h3 class="year-section">{{ post.date | date: '%Y' }}</h3>
+          {% endif %}
+        {% endunless %}
+            <article>
+              {% if post.link %}
+                <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+              {% else %}
+              <p class = "dateline">{{ post.date | date: "%-d %b %Y" }}</p>  
+              <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+              <p>{{ post.description | strip_html | truncate: 500 }}</p>
+              {% endif %}
+            </article>
+              
+      {% endfor %}
+          
       </div>
     {% endfor %}
                                   
