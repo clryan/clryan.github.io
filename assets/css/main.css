@@ -91,13 +91,13 @@ article {
 }
 
 nav {
-  font-weight: 600;
   text-transform: lowercase;
+  vertical-align: middle;
 }
 
 nav a {
-  font-size: 20px;
   vertical-align: middle;
+  font-size: 20px;
 }
 
 p a {
