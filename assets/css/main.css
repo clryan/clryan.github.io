@@ -90,14 +90,14 @@ article {
   margin-bottom: 30px;
 }
 
-nav {
-  text-transform: lowercase;
-  vertical-align: middle;
-}
 
 nav a {
-  vertical-align: middle;
   font-size: 20px;
+}
+
+.nav-page-name {
+  padding-right: 20px;
+  text-transform: lowercase;
 }
 
 p a {
