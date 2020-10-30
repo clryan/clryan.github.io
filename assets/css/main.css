@@ -74,7 +74,7 @@ a {
   color: #444444;
 }
 
-a:hover, a:active {
+a:hover, a:active, a:focus {
   color: #2455c3;
   text-decoration: underline;
   font-weight: inherit;
@@ -96,7 +96,6 @@ nav {
 
 nav a {
   font-size: 20px;
-  font-weight: 400;
   vertical-align: middle;
 }
 
