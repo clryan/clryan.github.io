@@ -37,7 +37,7 @@
       <h1 id="page-title">{{ page.title }}</h1>
  
     {% for tag in site.tags %}
-      <a href="{{ site.url }}/tag/#{{ tag | dowcase | slugify }})" style="cursor: pointer;" class="post_tag"> {{ tag }} </a>
+      <a href="{{ site.url }}/tag/#{{ tag | downcase | slugify }})" style="cursor: pointer;" class="post_tag"> {{ tag }} </a>
     {% endfor %}
       
       
