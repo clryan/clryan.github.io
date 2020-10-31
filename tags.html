@@ -1,0 +1,33 @@
+---
+layout: tags
+title: Posts by Tag
+permalink: /tag/
+---
+
+<div class="tags-expo">
+  <div class="tags-expo-list">
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    {% endfor %}
+  </div>
+  <hr/>
+  <div class="tags-expo-section">
+    {% for tag in site.tags %}
+    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+    <ul class="tags-expo-posts">
+      {% for post in tag[1] %}
+        <article>
+            {% if post.link %}
+              <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+            {% else %}
+            <p class = "dateline">{{ post.date | date: "%-d %b %Y" }}</p>  
+            <p class = "dateline">{{ concat: post.tags }}</p>  
+            {% endif %}
+            <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+            <p>{{ post.description | strip_html | truncate: 500 }}</p>
+          </article>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>
