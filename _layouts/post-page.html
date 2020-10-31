@@ -35,11 +35,6 @@
 
     <div id="index">
       <h1 id="page-title">{{ page.title }}</h1>
- 
-    {% for tag in site.tags %}
-      <a href="{{ site.url }}/tag/#{{ tag | downcase | slugify }})" style="cursor: pointer;" class="post_tag"> {{ tag }} </a>
-    {% endfor %}
-      
       
     {% for post in site.posts %}  
     {% unless post.next %}
@@ -56,6 +51,7 @@
               <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
             {% else %}
             <p class = "dateline">{{ post.date | date: "%-d %b %Y" }}</p>  
+            <p class = "dateline">{{ concat: post.tags }}</p>  
             <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
             <p>{{ post.description | strip_html | truncate: 500 }}</p>
             {% endif %}
