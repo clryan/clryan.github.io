@@ -36,6 +36,12 @@
     <div id="index">
       <h1 id="page-title">{{ page.title }}</h1>
       
+      <div class="tags-expo-list">
+        {% for tag in site.tags %}
+        <a href=" {{ site.url }}/tag/#{{ tag[0] | downcase | slugify }}" class="post-tag">{{ tag[0] }}</a>
+        {% endfor %}
+      </div>
+      
     {% for post in site.posts %}  
     {% unless post.next %}
       <h3 class="year-section">{{ post.date | date: '%Y' }}</h3>
@@ -50,8 +56,10 @@
             {% if post.link %}
               <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
             {% else %}
+            {% if post.tags %}
             <p class = "dateline">{{ post.date | date: "%-d %b %Y" }}</p>  
             <p class = "dateline">{{ concat: post.tags }}</p>  
+            {% endif %}
             <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
             <p>{{ post.description | strip_html | truncate: 500 }}</p>
             {% endif %}
