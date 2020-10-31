@@ -10,11 +10,11 @@ permalink: /tag/
     <a href="#{{ tag[0] | downcase | slugify }}" class="post-tag">{{ tag[0] }}</a>
     {% endfor %}
   </div>
-  <hr/>
+
   <div class="tags-expo-section">
     {% for tag in site.tags %}
-    <h2 id="{{ tag[0] | downcase | slugify }}">{{ tag[0] }}</h2>
-    <ul class="tags-expo-posts">
+    <h3 class="year-section" id="{{ tag[0] | downcase | slugify }}">{{ tag[0] }}</h3>
+    <div class="tags-expo-posts">
       {% for post in tag[1] %}
         <article>
             {% if post.link %}
@@ -27,7 +27,7 @@ permalink: /tag/
             <p>{{ post.description | strip_html | truncate: 500 }}</p>
           </article>
       {% endfor %}
-    </ul>
+    </div>
     {% endfor %}
   </div>
 </div>
