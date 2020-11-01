@@ -1,6 +1,6 @@
 ---
 layout: tags
-title: Posts by Tag
+title: Posts by Category
 permalink: /tag/
 ---
 
@@ -21,10 +21,9 @@ permalink: /tag/
               <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
             {% else %}
             <p class = "dateline">{{ post.date | date: "%-d %b %Y" }}</p>  
-            <p class = "dateline">{{ concat: post.tags }}</p>  
+            <p class = "dateline">{{ post.tags }}</p>           
             {% endif %}
             <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
-            <p>{{ post.description | strip_html | truncate: 500 }}</p>
           </article>
       {% endfor %}
     </div>
