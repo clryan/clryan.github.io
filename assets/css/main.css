@@ -136,12 +136,13 @@ small {
 }
 
 .link-post {
-
+  margin-bottom: 10px;
 }
 
-p.dateline {
+.dateline {
   font-size: 13px;
   color: #818181;
+  margin-bottom: 20px;
 }
 
 .year-section {
