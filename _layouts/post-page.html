@@ -57,8 +57,13 @@
               <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
             {% else %}
             {% if post.tags %}
-            <p class = "dateline">{{ post.date | date: "%-d %b %Y" }}</p>  
-            <p class = "dateline">{{ post.tags | array_to_sentence_string: "," }}</p>  
+            <span class = "dateline">{{ post.date | date: "%-d %b %Y" }} | </span>
+            <span class="dateline">{{ post.tags | array_to_sentence_string: "," }}</span>  
+            <span> 
+              {% for tag in post.tags %}
+                <a href=" {{ site.url }}/tag/#{{ tag[0] | downcase | slugify }}" class="post-tag">{{ tag[0] }}</a>
+              {% endfor %}
+            </span>
             {% endif %}
             <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
             <p>{{ post.description | strip_html | truncate: 500 }}</p>
@@ -66,8 +71,6 @@
           </article>
               
       {% endfor %}
- 
-      </div>
                                   
       <a href="#page-top" class="back-to-top">Back to Top ↑</a>
       
