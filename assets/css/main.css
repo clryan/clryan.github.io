@@ -136,14 +136,18 @@ small {
 }
 
 .link-post {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .dateline {
   font-size: 13px;
   color: #818181;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: inline-block;
+}
+
+.dateline a {
+  color: #818181;
 }
 
 .year-section {
