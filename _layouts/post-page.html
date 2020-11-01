@@ -60,7 +60,7 @@
             <span class = "dateline">{{ post.date | date: "%-d %b %Y" }} | </span>
             <span class="dateline">{{ post.tags | array_to_sentence_string: "," }}</span>  
 
-            <div class="post-tags">
+            <span class="post-tags">
               {% if post %}
                 {% assign tags = post.tags %}
               {% else %}
@@ -68,9 +68,9 @@
               {% endif %}
               {% for tag in tags %}
               <a href="{{site.baseurl}}/tag/#{{ tag | slugify }}">{{ tag | downcase }}</a>
-              {% unless forloop.last %}&nbsp;{% endunless %}
+              {% unless forloop.last %},&nbsp;{% endunless %}
               {% endfor %}
-            </div>
+            </span>
             
             {% endif %}
             <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
