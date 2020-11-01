@@ -28,8 +28,8 @@
           <article>
               <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></h3>            
    
-              <span class = "dateline">{{ post.date | date: "%-d %b %Y" }} // </span>
-              <span class="post-tags">
+              <span class="dateline">{{ post.date | date: "%-d %b %Y" }} // </span>
+              <span class="dateline">
                 {% if post %}
                   {% assign tags = post.tags %}
                 {% else %}
