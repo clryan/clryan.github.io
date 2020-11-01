@@ -26,13 +26,21 @@
         <p>See <a href="{{ site.url}}/posts/">all posts</a> here.</p>
           {% for post in site.posts limit:5 %}    
           <article>
-            {% if post.link %}
-              <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></h3>
-            {% else %}
-              <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></h3>
-              <p class = "dateline">{{ post.date | date: "%B %d, %Y" }}</p>
-              <p>{{ post.description | strip_html | truncate: 500 }}</p>
-            {% endif %}
+              <h3 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="link-post">{{ post.title }}</a></h3>            
+   
+              <span class = "dateline">{{ post.date | date: "%-d %b %Y" }} // </span>
+              <span class="post-tags">
+                {% if post %}
+                  {% assign tags = post.tags %}
+                {% else %}
+                  {% assign tags = page.tags %}
+                {% endif %}
+                {% for tag in tags %}
+                <a href="{{site.baseurl}}/tag/#{{ tag | slugify }}">{{ tag | downcase }}</a>
+                {% unless forloop.last %},&nbsp;{% endunless %}
+                {% endfor %}
+              </span>
+            
           </article>
           {% endfor %}
       </div>
