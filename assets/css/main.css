@@ -171,8 +171,8 @@ small {
 }
 
 .tag-header {
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 17px;
+  margin-bottom: 18px;
 }
 
 .tags-expo-posts {
@@ -180,8 +180,8 @@ small {
 }
 
 .tags-expo-posts article {
-  margin-bottom: 3px;
-  margin-top: 3px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 @media print, screen and (min-width: 1060px) {
