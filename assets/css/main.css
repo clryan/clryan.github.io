@@ -162,21 +162,26 @@ small {
 }
 
 .tags-expo-list {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .post-tag {
 
 }
 
-.tag-header h3 {
+.tag-header {
   margin-top: 20px;
   margin-bottom: 15px;
 }
 
+.tags-expo-posts {
+
+}
+
 .tags-expo-posts article {
-  margin-bottom: 15px;
+  margin-bottom: 3px;
+  margin-top: 3px;
 }
 
 @media print, screen and (min-width: 1060px) {
