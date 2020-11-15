@@ -161,6 +161,24 @@ small {
   font-size: 18px;
 }
 
+.tags-expo-list {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.post-tag {
+
+}
+
+.tag-header h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.tags-expo-posts article {
+  margin-bottom: 15px;
+}
+
 @media print, screen and (min-width: 1060px) {
   
   nav {
