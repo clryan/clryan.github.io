@@ -4,6 +4,7 @@
     {% include head.html %}
   </head>
   <body>
+    <a id="page-top"></a>
     <div class="wrapper">
       <header>
         {% include page-header.html %}
@@ -18,7 +19,7 @@
         </h3>
       </nav>
         
-        <h1 id="page-top" style="font-weight:500; font-style:normal;">{{ page.title }}</h1>
+        <h1 id="page-title" style="font-weight:500; font-style:normal;">{{ page.title }}</h1>
         <p class="dateline">{{ page.date | date: "%-d %b %Y" }}</p>
 
         <article> 
