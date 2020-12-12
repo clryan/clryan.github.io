@@ -172,7 +172,13 @@ small {
 }
 
 .post-tag {
-
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 0.3rem 0.5rem;
+  margin: .25rem;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #883364;
 }
 
 .tag-header {
