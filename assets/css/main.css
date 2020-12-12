@@ -102,7 +102,12 @@ nav a {
 
 p a {
   font-weight: 500;
-  color: #2455c3;
+  color: #883364;
+}
+
+p a:hover {
+  font-weight: 500;
+  color: #883364;
 }
 
 small {
