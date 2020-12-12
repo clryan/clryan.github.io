@@ -2,6 +2,4 @@
 layout: default
 ---
 
-Hi there! I'm a data analyst at DaVita, and I just finished a Master's in Business Analytics at the Carlson School of Management (University of Minnesota). I'm interested in predictive modeling and data visualization, as well as causal inference.
-
-I'm most familiar with R and Python.
+Hi there, and welcome to my blog! I'm a data analyst at DaVita, and I just finished a Master's in Business Analytics at the Carlson School of Management (University of Minnesota). For more about me, (see here)[https://clryan.github.io/about/].
