@@ -6,7 +6,7 @@ permalink: /about/
 
 Hi there! I'm a senior data analyst at DaVita, and I just finished a Master's in Business Analytics at the Carlson School of Management (University of Minnesota). My interests include predictive modeling, data visualization, statistics, and causal inference.  
 
-I'm proficient in Python, R, and SQL, and I know a bit about CSS from building this site.
+I'm proficient in Python, R, and SQL, and I know a bit about HTML and CSS from building this site.
 
 ### Random Facts About Me
 
