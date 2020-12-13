@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Customer spending prediction 1: processing large data files in pandas"
+title: "Customer Spending Prediction 1: Processing Large Data Files in Pandas"
 description: "Google Analytics offers a ton of information about website traffic. In this post, we'll look at using that data to predict customer spending at the Google Store."
 is_post: true
 tags: [python, data cleaning]
@@ -26,6 +26,8 @@ import os
 !pip install git+http://github.com/clryan/pyutils.git
 from pyutils.cleaning import na_cols, one_val_cols
 ```
+
+### Read in the compressed data and extract JSON columns
 
 The data from Kaggle downloads into a .zip folder. If we were to extract everything in the .zip folder, we'd end up with over 30 GB - that's huge! So it's best to leave it zipped and use the `zipfile` library to handle reading individual files. We can use the `.open()` method to access the specific file we need when reading into pandas.
 
@@ -180,6 +182,7 @@ train_tmp.sample(5) #examine v2 training data
 </table>
 </div>
 
+
 Here we can see that many of the columns actually contain JSON data fields within them. We need to flatten all the fields and extract the JSON information in order to get the data into a usable format. If we examine the fields closely, we can see that the `customDimensions` and `hits` columns have single-quoted values for the JSON field names, rather than the expected double quotes. For now let's leave out these columns, and we'll also leave out the `sessionId` column that only appears in the earlier version of the training data set.
 
 ```python
@@ -222,7 +225,6 @@ train = load_df(csv_path=z.open('train.csv'))
 Wall time: 2min
 </pre>
 
-
 ```python
 train.memory_usage(deep=True).sum() * 1e-6 #megabytes
 ```
@@ -238,6 +240,8 @@ train.shape
 </pre>
 
 There are just over 900,000 rows, and right now it's using around 3 GB of memory. That's pretty large but still workable, but when we load in the final training data (a 24 GB file) that won't be pretty. Now that we've extracted all the JSON fields, let's look at the data.
+
+### NAs and useless columns
 
 ```python
 train.sample(5)
@@ -470,6 +474,8 @@ int64      4
 bool       1
 </pre>
 
+### Save memory by converting data types
+
 By converting one of the object columns to pandas' native categorical type, we can see how much more efficient it is. For this column, the size was reduced from 57 MB to less than 1 MB.
 
 ```python
@@ -503,6 +509,8 @@ num_cols = ['visitId','visitNumber','totals.transactionRevenue','totals.hits','t
 for col in num_cols:
 train[col] = pd.to_numeric(train[col], downcast='integer')
 ```
+
+### Examine the remaining columns
 
 Now that we've cleaned up the column types, let's examine the data a little more closely. We'll start by looking at the fields extracted from the original "device" JSON column.
 
@@ -910,9 +918,9 @@ Here are the steps we've taken so far:
 
 We don't need to re-examine all the columns in the training and test sets, since we already know which columns to drop. So we can skip that step, but we'll do all the other steps.
 
-### Test data
-#### Read in data and extract JSON
+### Prepare the test data
 
+We'll read in the data and extract the JSON fields using the function we defined above.
 
 ```python
 use_cols = ['channelGrouping',
@@ -941,14 +949,11 @@ Wall time: 1min 36s
 test.memory_usage(deep=True).sum() * 1e-6 #megabytes
 ```
 
-
 <pre class="out">
-
 1371.997621
 </pre>
 
-
-#### Drop unneeded columns and convert NAs
+Now we'll drop the unneeded columns and convert the NAs.
 
 
 ```python
@@ -969,8 +974,7 @@ The following columns contain only NA values and have been dropped:
  ['device.browserSize', 'device.browserVersion', 'device.flashVersion', 'device.language', 'device.mobileDeviceBranding', 'device.mobileDeviceInfo', 'device.mobileDeviceMarketingName', 'device.mobileDeviceModel', 'device.mobileInputSelector', 'device.operatingSystemVersion', 'device.screenColors', 'device.screenResolution', 'geoNetwork.cityId', 'geoNetwork.latitude', 'geoNetwork.longitude', 'geoNetwork.networkLocation', 'trafficSource.adwordsClickInfo.criteriaParameters']
 </pre>
 
-#### Convert data types
-
+Next, we'll fix the data types.
 
 ```python
 test['date'] = pd.to_datetime(test['date'],format='%Y%m%d').dt.date
@@ -1002,19 +1006,15 @@ test.memory_usage(deep=True).sum() * 1e-6 #megabytes
 ```
 
 <pre class="out">
-
-
 255.960481
-
 </pre>
 
-#### Save as feather file
+Finally, we'll save as a `feather` file so we can load it in quickly when we do our EDA.
 
 
 ```python
 test.to_feather('test.feather')
 ```
-
 
 ```python
 print("test.feather:", os.stat('test.feather').st_size * 1e-6)
@@ -1024,9 +1024,8 @@ test.feather: 23.307498
 </pre>
 
 ### Training data
-#### Read in data and extract JSON
-Here's the real test - this file is almost 24 GB so let's see if we can handle it.
 
+Here's the real test - this file is almost 24 GB so let's see if we can handle reading in the data frame and extracting the JSON fields.
 
 ```python
 %%time
@@ -1036,20 +1035,14 @@ train = load_df(csv_path=z.open('train_v2.csv'))
 Wall time: 6min 23s
 </pre>
 
-
 ```python
 train.memory_usage(deep=True).sum() * 1e-6 #megabytes
 ```
-
-
 <pre class="out">
-
 5751.213158
 </pre>
 
-
-#### Drop unneeded columns and convert NAs
-
+Not bad! Now let's get rid of some of the dead weight columns and fix the NAs.
 
 ```python
 drop_cols = ['totals.visits', 'trafficSource.adwordsClickInfo.gclId','trafficSource.campaign',
@@ -1068,7 +1061,7 @@ The following columns contain only NA values and have been dropped:
  ['device.browserSize', 'device.browserVersion', 'device.flashVersion', 'device.language', 'device.mobileDeviceBranding', 'device.mobileDeviceInfo', 'device.mobileDeviceMarketingName', 'device.mobileDeviceModel', 'device.mobileInputSelector', 'device.operatingSystemVersion', 'device.screenColors', 'device.screenResolution', 'geoNetwork.cityId', 'geoNetwork.latitude', 'geoNetwork.longitude', 'geoNetwork.networkLocation', 'trafficSource.adwordsClickInfo.criteriaParameters']
 </pre>
 
-#### Convert data types
+We'll convert the data types and slim down our data frame size even more.
 
 
 ```python
@@ -1102,12 +1095,10 @@ train.memory_usage(deep=True).sum() * 1e-6 #megabytes
 
 
 <pre class="out">
-
 1070.337347
 </pre>
 
-
-#### Save as feather file
+Finally, as above, we'll save our newly svelte training data to a `feather` file for easy loading next time.
 
 
 ```python
