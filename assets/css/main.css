@@ -195,6 +195,13 @@ small {
   margin-top: 0px;
 }
 
+.overflow { overflow-x: scroll; }
+
+pre.out {
+  background: #fff;
+  border: #fff;
+}
+
 @media print, screen and (min-width: 1060px) {
   
   nav {
