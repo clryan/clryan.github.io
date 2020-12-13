@@ -202,7 +202,7 @@ pre.out {
   border: #fff;
 }
 
-.highlight .k, .highlight .ow {
+.highlight .k, .highlight .ow, .highlight .kn {
   color: #445588;
 }
 
