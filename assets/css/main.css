@@ -202,6 +202,14 @@ pre.out {
   border: #fff;
 }
 
+.highlight .k, .highlight .ow {
+  color: #445588;
+}
+
+.highlight .s {
+  color: #990073;
+}
+
 @media print, screen and (min-width: 1060px) {
   
   nav {
