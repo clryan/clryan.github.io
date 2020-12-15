@@ -1023,7 +1023,7 @@ print("test.feather:", os.stat('test.feather').st_size * 1e-6)
 test.feather: 23.307498
 </pre>
 
-### Training data
+### Prepare the training data
 
 Here's the real test - this file is almost 24 GB so let's see if we can handle reading in the data frame and extracting the JSON fields.
 
@@ -1113,4 +1113,12 @@ print("train.feather:", os.stat('train.feather').st_size * 1e-6)
 train.feather: 94.12897799999999
 </pre>
 
-Whew, we did it! Now we can just load in the (very small) feather files and perform our EDA, feature engineering, and modeling in a new notebook without having to deal with these enormous data files.
+### Conclusion
+
+Whew, we did it! We started with some very large files that would have been difficult to work with and got them down to a much more manageable size. Now we can just load in the (very small) feather files and perform our EDA, feature engineering, and modeling in a new notebook without having to deal with these enormous data files.
+
+To recap, some helpful strategies to use when dealing with large files or large data sets include:
+
+- Using the `zipfile` library to read in compressed files without having to unzip them. 
+- Converting the columns to more efficient data types. Strings (pandas' `object` type) are usually the biggest memory hogs, so that's a good place to start.
+- Saving the data as a feather file once preprocessing is finished.
