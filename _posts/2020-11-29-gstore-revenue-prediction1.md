@@ -1115,7 +1115,7 @@ train.feather: 94.12897799999999
 
 ### Conclusion
 
-Whew, we did it! We started with some very large files that would have been difficult to work with and got them down to a much more manageable size. Now we can just load in the (very small) feather files and perform our EDA, feature engineering, and modeling in a new notebook without having to deal with these enormous data files.
+Whew, we did it! We started with some very large files that would have been difficult to work with and got them down to a much more manageable size. Keep in mind, we were able to manage this even on my not-particularly-powerful personal desktop computer, so these strategies are quite useful. Now we can just load in the (very small) feather files and perform our EDA, feature engineering, and modeling in a new notebook without having to deal with these enormous data files.
 
 To recap, some helpful strategies to use when dealing with large files or large data sets include:
 
