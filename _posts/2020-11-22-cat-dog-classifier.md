@@ -218,7 +218,7 @@ $$
 
 Without getting too deeply into the math behind this metric, essentially it is a measure of how closely the predicted probabilities match the actual class. For example, if an observation belongs to class 1 and the predicted probability is .99, those numbers are very close and the loss will be small. On the other hand, if the probability is .01, the loss will be very large. To see how this differs from accuracy, let's use the following example. Suppose you have two observations of class 1 (dogs in this case). For the first observation, the model's predicted probability is .99 &mdash; it's very sure of its guess. For the second observation, the predicted probability is .51. Both observations are correctly classified as dogs, so it gets a perfect score on the accuracy metric. However, the second observation will have a worse loss score than the first because the model was less "sure" of its prediction.
 
-Now that we've trained the model, let's load in the saved model and look at some of the predictions.
+Now that we've trained the model, let's load in the saved model and look at our evaluation metrics.
 
 
 ```python
@@ -394,4 +394,4 @@ Eight out of ten - not bad!
 
 ### Conclusions
 
-Many real-world image recognition problems use convolutional neural networks (CNNs): facial recognition, medical image diagnostics, even mapping climate change through satellite images. The example in this post is a simplified version of those problems, but the underlying methods are the same. 
+Many real-world image recognition problems use convolutional neural networks (CNNs): facial recognition, medical image diagnostics, even mapping climate change through satellite images. The example in this post is a simplified version of those problems, but the underlying methods are the same.
