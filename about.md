@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi there! I'm a senior data analyst at DaVita, and I just finished a Master's in Business Analytics at the Carlson School of Management (University of Minnesota). My interests include predictive modeling, data visualization, statistics, and causal inference.  
+Hi there! I'm a senior data analyst at DaVita, and I just finished a Master's in Business Analytics at the Carlson School of Management (University of Minnesota). My interests include predictive modeling, data visualization, and probability.  
 
 I'm proficient in Python, R, and SQL, and I know a bit about HTML and CSS from building this site.
 
@@ -13,12 +13,6 @@ I'm proficient in Python, R, and SQL, and I know a bit about HTML and CSS from b
 - I spent six years teaching English as a Second Language – I've got the answers to all your grammar questions!
 - I'm a typography nerd (ask me about my favorite monospaced font for programming).
 - I lived in Lima, Peru for three years (ask me about Pisco Sours).
-
-### Connect
-
-- [LindkedIn](https://www.linkedin.com/in/cl-ryan/)
-- [Github](github.com/clryan)
-- [Twitter](https://twitter.com/DataClaireMN)
 
 ### About This Site
 
