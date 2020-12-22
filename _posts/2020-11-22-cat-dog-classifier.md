@@ -6,7 +6,7 @@ is_post: true
 tags: [python, machine learning]
 ---
 
-When you look at a picture of a cat or a dog, you don't need to think very hard about which animal is in the picture - you just know. But for a computer, it's a much more difficult task.
+When you look at a picture of a cat or a dog, you don't need to think very hard about which animal is in the picture &mdash; you just know. But for a computer, it's a much more difficult task.
 
 I have images of cats and dogs that I got from [this Kaggle competition](https://www.kaggle.com/c/dogs-vs-cats) and I've organized them into a specific directory structure to use with the Keras `flow_from_directory()` method to process the image data. For the training and validation sets, each class has been separated into its own sub-directory. The test set has all the images in one sub-directory since the class is unknown. Note: it's possible to have all images in a single directory and process them using the `flow_from_dataframe()` method, but I found it easier to process them this way.
 
@@ -290,7 +290,7 @@ After submitting to Kaggle, I get a loss metric of .285. That's pretty close to 
 
 ### The fun part: looking at our predictions
 
-Let's look at some pictures and see how well our model did! Remember - humans are naturals at this task so we'll be able to easily tell if our predictions are correct or not just by looking. The code below sets up a function to display 25 pictures and their predicted class (cat or dog), then reads in the first 25 images from our test set using our familiar generator method.
+Let's look at some pictures and see how well our model did! Remember &mdash; humans are naturals at this task so we'll be able to easily tell if our predictions are correct or not just by looking. The code below sets up a function to display 25 pictures and their predicted class (cat or dog), then reads in the first 25 images from our test set using our familiar generator method.
 
 ```python
 def show_batch(image_batch, label_batch):
@@ -390,7 +390,7 @@ show_batch_ten(image_batch, label_batch)
 ```
 ![](/assets/img/cat-dog-classifier/fam_pets_predictions.png)
 
-Eight out of ten - not bad!
+Eight out of ten &mdash; not bad!
 
 ### Conclusions
 

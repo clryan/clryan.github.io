@@ -6,7 +6,7 @@ is_post: true
 tags: [python, data cleaning]
 ---
 
-[This Kaggle competition](https://www.kaggle.com/c/ga-customer-revenue-prediction) challenges participants to analyze Google Analytics data from the Google Merchandise Store (aka G Store, where Google products are sold) to predict future revenue by site visitor. There's just one problem: the data files are a whopping 34 GB - ouch. Dealing with very large data files is a problem that most data scientists will run into eventually. In this post, I'll walk through how I loaded and processed this giant data set without tearing my hair out.
+[This Kaggle competition](https://www.kaggle.com/c/ga-customer-revenue-prediction) challenges participants to analyze Google Analytics data from the Google Merchandise Store (aka G Store, where Google products are sold) to predict future revenue by site visitor. There's just one problem: the data files are a whopping 34 GB &mdash; ouch. Dealing with very large data files is a problem that most data scientists will run into eventually. In this post, I'll walk through how I loaded and processed this giant data set without tearing my hair out.
 
 In this notebook, we'll load in the data, examine it, fix any data types and drop useless columns, and save our processed data as a feather file for faster loading.
 
@@ -29,7 +29,7 @@ from pyutils.cleaning import na_cols, one_val_cols
 
 ### Read in the compressed data and extract JSON columns
 
-The data from Kaggle downloads into a .zip folder. If we were to extract everything in the .zip folder, we'd end up with over 30 GB - that's huge! So it's best to leave it zipped and use the `zipfile` library to handle reading individual files. We can use the `.open()` method to access the specific file we need when reading into pandas.
+The data from Kaggle downloads into a .zip folder. If we were to extract everything in the .zip folder, we'd end up with over 30 GB &mdash; that's huge! So it's best to leave it zipped and use the `zipfile` library to handle reading individual files. We can use the `.open()` method to access the specific file we need when reading into pandas.
 
 ```python
 z = ZipFile("ga-customer-revenue-prediction.zip")
@@ -874,7 +874,7 @@ train.filter(like='total', axis=1).sample(5)
 </table>
 </div>
 
-Finally, let's examine the revenue column, since we'll be using that to calculate the target variable.
+Let's examine the revenue column, since we'll be using that to calculate the target variable.
 
 ```python
 print('There are', train.shape[0],'rows and',
@@ -1025,7 +1025,7 @@ test.feather: 23.307498
 
 ### Training data
 
-Here's the real test - this file is almost 24 GB so let's see if we can handle reading in the data frame and extracting the JSON fields.
+Here's the real test &mdash; this file is almost 24 GB so let's see if we can handle reading in the data frame and extracting the JSON fields.
 
 ```python
 %%time
@@ -1113,4 +1113,12 @@ print("train.feather:", os.stat('train.feather').st_size * 1e-6)
 train.feather: 94.12897799999999
 </pre>
 
-Whew, we did it! Now we can just load in the (very small) feather files and perform our EDA, feature engineering, and modeling in a new notebook without having to deal with these enormous data files.
+### Conclusion
+
+Whew, we did it! We started with some very large files that would have been difficult to work with and got them down to a much more manageable size. Keep in mind, we were able to manage this even on my not-particularly-powerful personal desktop computer, so these strategies are quite useful. Now we can just load in the (very small) feather files and perform our EDA, feature engineering, and modeling in a new notebook without having to deal with these enormous data files.
+
+To recap, some helpful strategies to use when dealing with large files or large data sets include:
+
+- Using the `zipfile` library to read in compressed files without having to unzip them.
+- Converting the columns to more efficient data types. Strings (pandas' `object` type) are usually the biggest memory hogs, so that's a good place to start.
+- Saving the data as a feather file once preprocessing is finished.
