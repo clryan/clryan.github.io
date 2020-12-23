@@ -51,13 +51,13 @@ h1 {
 }
 
 h2 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   font-style: italic;
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 24px;
 }
 
@@ -101,12 +101,12 @@ nav a {
 }
 
 p a {
-  font-weight: 500;
+  font-weight: 600;
   color: #883364;
 }
 
 p a:hover {
-  font-weight: 500;
+  font-weight: 600;
   color: #883364;
 }
 
